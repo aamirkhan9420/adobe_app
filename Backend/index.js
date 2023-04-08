@@ -5,6 +5,7 @@ require("dotenv").config()
 app.use(express.json())
 let cors = require("cors")
 const { userRoute } = require("./routes/user.route")
+const { postRoute } = require("./routes/post.route")
 app.use(cors({
     origin: "*"
 }))
@@ -12,6 +13,7 @@ app.use(cors({
 let PORT = process.env.PORT
 
 app.use("/users",userRoute)
+app.use("/posts",postRoute)
 
 app.listen(PORT, async (req, res) => {
 
