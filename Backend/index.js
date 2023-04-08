@@ -4,15 +4,14 @@ const app = express()
 require("dotenv").config()
 app.use(express.json())
 let cors = require("cors")
+const { userRoute } = require("./routes/user.route")
 app.use(cors({
     origin: "*"
 }))
 
 let PORT = process.env.PORT
 
-app.get("/", (req, res) => {
-    res.send("welcome to home")
-})
+app.use("/users",userRoute)
 
 app.listen(PORT, async (req, res) => {
 
