@@ -6,6 +6,7 @@ import UserAnalytics from '../components/UserAnalytics/UserAnalytics'
 import UserList from '../components/UserList/UserList'
 import Userform from '../components/UserForm/UserForm'
 import PostAnalytics from '../components/PostAnalytics/PostAnalytics'
+import ViewUser from '../components/ViewUser/ViewUser'
 
 function AllRoutes() {
   return (
@@ -16,6 +17,8 @@ function AllRoutes() {
     <Route path='/userform' element={<Userform/>}/>
     <Route path='/userlist' element={<UserList/>}/>
     <Route path='/useranalytics' element={<UserAnalytics/>}/>
+    <Route path='/viewuser' element={<ViewUser/>}/>
+
 
    </Routes>
   )

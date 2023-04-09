@@ -36,9 +36,11 @@ userRoute.delete("/:id", async (req, res) => {
 
 })
 
+
+
 userRoute.get("/analytics/users", async (req, res) => {
     let UserList = await UserModel.find()
-    res.send({ "msg": UserList.length })
+    res.send({ "msg": UserList })
 })
 
 userRoute.get("/analytics/users/top-active", async (req, res) => {
