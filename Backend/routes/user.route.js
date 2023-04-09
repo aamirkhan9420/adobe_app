@@ -9,9 +9,7 @@ userRoute.post("/", async (req, res) => {
         await newUser.save()
         res.send({ "msg": "new user added" })
     } catch (error) {
-        res.send({ "msg": "make sure minimum length of user name atleast 1 and maximum length of user name is less or equal to 50" })
-
-        
+        res.send({ "msg": "make sure minimum length of user name atleast 1 and maximum length of user name is less or equal to 50" })   
     }
 
 
