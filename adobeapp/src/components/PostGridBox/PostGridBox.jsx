@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Text, useToast } from '@chakra-ui/react'
+import { Box, Grid,  Text, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { GrView } from "react-icons/gr";
@@ -12,16 +12,17 @@ import axios from 'axios';
 function PostGridBox({ props, getPostList }) {
     let navigate = useNavigate()
     let toast = useToast()
+
     let token = localStorage.getItem("token")
     const config = {
         headers: { Authorization: `Bearer ${token}` }
     };
+
     let handleView = (el) => {
         navigate("/viewuser", { state: el })
     }
 
     let handleDelete = (id) => {
-
         axios.delete(`http://localhost:8080/posts/${id}`, config).then((res) => {
             toast({
                 title: res.data.msg,
@@ -41,14 +42,16 @@ function PostGridBox({ props, getPostList }) {
     }
 
     let handleLike = (like, id) => {
-
         axios.post(`http://localhost:8080/posts/${id}/like`, { likes: like }, config).then((res) => {
-            toast({
-                title: res.data.msg,
-                status: "success",
-                position: "top",
-                isClosable: true
-            })
+           
+            getPostList()
+
+        }).catch((er) => {
+            console.log(er)
+        })
+    }
+      let unlikefun=(like,id)=>{
+        axios.post(`http://localhost:8080/posts/${id}/unlike`, { likes: like }, config).then((res) => {
             getPostList()
 
         }).catch((er) => {
@@ -56,6 +59,8 @@ function PostGridBox({ props, getPostList }) {
         })
     }
 
+
+    
     return (
         <Box w={{ base: "100%", sm: "100%", md: "90%", lg: "80%", xl: "80%" }} margin={"auto"} mt={20}>
 
@@ -71,8 +76,7 @@ function PostGridBox({ props, getPostList }) {
                             <MdDeleteForever cursor={"pointer"} onClick={() => handleDelete(el._id)} />
                             <AiOutlineLike cursor={"pointer"} onClick={() => handleLike(el.likes, el._id)} />
                             <span>{el.likes}</span>
-
-                            <BiDislike />
+                            <BiDislike cursor={"pointer"}  onClick={()=>unlikefun(el.likes, el._id)} />
                         </Box>
                     </Box>
                 ))}
