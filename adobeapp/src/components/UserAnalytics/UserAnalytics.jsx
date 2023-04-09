@@ -1,28 +1,51 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box,  Heading } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import GridBox from '../Grid/GridBox'
 
 function UserAnalytics() {
   let [totalUser, serTotalUser] = useState("")
+  let [topActive,setTopActive]=useState([])
+
   let getUserAnalytics = () => {
-    axios.get("http://localhost:8080/users/analytics/users").then((res) => {
+    let token=localStorage.getItem("token")
+    const config = {
+      headers: { Authorization: `Bearer ${token}` }
+  };
+    axios.get("http://localhost:8080/users/analytics/users",config).then((res) => {
       serTotalUser(res.data.msg.length)
+    }).catch((er) => {
+      console.log(er)
+    })
+  }
+
+  let getTopFiveUserList=()=>{
+    let token=localStorage.getItem("token")
+    const config = {
+      headers: { Authorization: `Bearer ${token}` }
+  };
+    axios.get("http://localhost:8080/users/analytics/users/top-active",config).then((res) => {
+      setTopActive(res.data.msg)
     }).catch((er) => {
       console.log(er)
     })
   }
   useEffect(() => {
     getUserAnalytics()
+    getTopFiveUserList()
   }, [])
   return (
-    <Box>
-      <Box borderRadius={10} boxShadow={"md"} display={"flex"} alignItems={"center"} justifyContent={"space-evenly"} p={10} w={"40%"} m={"auto"} mt={50} bgColor={"white"}>
+    <Box display={"flex"} flexDir={"column"} justifyContent={"space-evenly"} gap={10} pb={20} pt={20}>
+      <Box w={{ base: "80%", sm: "85%", md: "75%", lg: "50%", xl: "40%" }} borderRadius={10} boxShadow={"md"} display={"flex"} alignItems={"center"} justifyContent={"space-evenly"} p={10}  m={"auto"}  bgColor={"white"}>
         <Heading size={"md"}>Total Users</Heading>
-        <Box bgColor={"#EB6424"} borderRadius={"50%"} fontSize={80} color={"white"} w={"20%"} >
+        <Box bgColor={"#EB6424"} borderRadius={"50%"} fontSize={{base:55,sm:70,md:70, lg:80, xl:80}} color={"white"} w={{ base: "45%", sm: "25%", md: "20%", lg: "25%", xl: "22%" }} >
           {totalUser}
         </Box>
       </Box>
-
+      <Box>
+        <Box w={{ base: "75%", sm: "75%", md: "75%", lg: "90%", xl: "75%" }} bgGradient='linear(to-r, green.200, pink.500)' fontSize={18} fontWeight={600} p={2} m={"auto"} color={"white"}>Top Five Most Active Users</Box>
+      <GridBox props={topActive}  />
+    </Box>
     </Box>
   )
 }

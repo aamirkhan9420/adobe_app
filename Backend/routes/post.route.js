@@ -4,13 +4,13 @@ postRoute = express.Router()
 
 postRoute.post("/", async (req, res) => {
     let post = req.body
-    
+    post.likes=0
     try {
         let newPost = new PostModel(post)
         await newPost.save()
-        res.send({ "msg": "new post added" })
+        res.send({ "msg": "new post added",status:"success" })
     } catch (error) {
-        res.send({ "msg": "make sure minimum length of content atleast 1 and maximum length of content 300" })
+        res.send({ "msg": "make sure minimum length of content atleast 1 and maximum length of content 300", status:"warning"})
     }
 
 })
@@ -37,7 +37,8 @@ postRoute.delete("/:id", async (req, res) => {
 
 postRoute.post("/:id/like", async (req, res) => {
     let id = req.params.id
-    let { likes } = await PostModel.findOne({ _id: id })
+    // let { likes } = await PostModel.findOne({ _id: id })
+    let likes=req.body.likes
     let newlike = likes + 1
     await PostModel.findByIdAndUpdate({ _id: id }, { likes: newlike })
     res.send({ "msg": "Post liked " })
@@ -45,7 +46,8 @@ postRoute.post("/:id/like", async (req, res) => {
 
 postRoute.post("/:id/unlike", async (req, res) => {
     let id = req.params.id
-    let { likes } = await PostModel.findOne({ _id: id })
+    let likes=req.body.likes
+    // let { likes } = await PostModel.findOne({ _id: id })
     let newunlike;
     if (likes >= 1) {
         newunlike = likes - 1
@@ -58,7 +60,7 @@ postRoute.post("/:id/unlike", async (req, res) => {
 
 postRoute.get("/analytics/posts", async (req, res) => {
     let PostList = await PostModel.find()
-    res.send({ "msg": PostList.length })
+    res.send({ "msg": PostList })
 })
 
 postRoute.get("/analytics/posts/top-liked", async (req, res) => {

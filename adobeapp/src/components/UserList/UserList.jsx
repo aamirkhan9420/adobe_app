@@ -5,7 +5,11 @@ import axios from 'axios'
 function UserList() {
   let [userList, setUserList] = useState([])
   let getUserList = () => {
-    axios.get("http://localhost:8080/users/analytics/users").then((res) => {
+    let token=localStorage.getItem("token")
+    const config = {
+      headers: { Authorization: `Bearer ${token}` }
+  };
+    axios.get("http://localhost:8080/users/analytics/users",config).then((res) => {
       setUserList(res.data.msg)
     }).catch((er) => {
       console.log(er)
