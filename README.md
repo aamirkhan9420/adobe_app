@@ -30,11 +30,48 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2376)](https://user-images.githubusercontent.com/101388992/230823099-75b17e8d-7ae6-4d4e-a704-c1fb033fcf15.png)
 
-
-
-
-
 ![Screenshot (2377)](https://user-images.githubusercontent.com/101388992/230823138-a2ff8ede-6eb3-46e7-9699-8ba60aea7b1c.png)
+
+
+![Screenshot (2378)](https://user-images.githubusercontent.com/101388992/230823831-5fa409f6-03aa-46de-8a01-3c4a793fe3cf.png)
+
+
+
+
+
+![Screenshot (2379)](https://user-images.githubusercontent.com/101388992/230823853-afbf0ff1-c648-411f-a541-e61ca76d7db1.png)
+
+
+
+
+
+
+
+![Screenshot (2382)](https://user-images.githubusercontent.com/101388992/230823945-6d4d8389-f6a0-4831-ae54-95d401cdc31d.png)
+
+
+
+
+
+![Screenshot (2383)](https://user-images.githubusercontent.com/101388992/230823958-8211e7bb-e1ea-4f55-ab28-1c6a8819cd85.png)
+
+
+
+
+
+
+![Screenshot (2384)](https://user-images.githubusercontent.com/101388992/230823973-8f9e63ca-d526-42ec-add9-6a44b670e170.png)
+
+
+
+
+
+
+![Screenshot (2385)](https://user-images.githubusercontent.com/101388992/230823981-5bed7c7f-bf7a-4906-a134-f10a78c4b83d.png)
+
+
+
+
 
 
 
