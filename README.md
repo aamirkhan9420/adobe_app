@@ -72,7 +72,21 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 
 
-
+ <h1>Tech Stack</h1>
+ <h3>frontend</h3>
+- React.js
+- JavaScript
+- Chakra-ui
+- React icons
+ <h3>Backend</h3>
+ -Express
+ -mongoose
+ -jsonwebtoken
+ -mvc
+ -MongoDb
+ -bcrypt.
+<h1>Author</h1> 
+<li>Aamir Khan</li>
 
 
 
