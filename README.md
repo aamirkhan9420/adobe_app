@@ -50,12 +50,12 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2385)](https://user-images.githubusercontent.com/101388992/230823981-5bed7c7f-bf7a-4906-a134-f10a78c4b83d.png)
 
-<h2>If user clicks on User List option in navbar then user will redirected to the user list page where user will see different users on adobe media.here user can perform edit, delete, view activities</h2>
+<h2>If user clicks on User List option in navbar then user will redirected to the user list page where user will see different users on adobe media.here user can perform edit, delete, view activities.</h2>
 
 ![Screenshot (2378)](https://user-images.githubusercontent.com/101388992/230823831-5fa409f6-03aa-46de-8a01-3c4a793fe3cf.png)
 
 
-<h2>if user clicks on UserAnalytics in navbar then user will redirected to UserAnalytics page where user can see total number of users and top 5 most acitve users</h2>
+<h2>if user clicks on UserAnalytics in navbar then user will redirected to UserAnalytics page where user can see total number of users and top 5 most acitve users.</h2>
 
 
 ![Screenshot (2379)](https://user-images.githubusercontent.com/101388992/230823853-afbf0ff1-c648-411f-a541-e61ca76d7db1.png)
