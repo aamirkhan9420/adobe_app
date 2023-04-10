@@ -17,10 +17,10 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 
 
-
+<h2>User need to signup first</h2>
 ![Screenshot (2373)](https://user-images.githubusercontent.com/101388992/230823032-ed85547f-2129-4942-a135-98906ea6a66b.png)
 
-
+<h2>After signup user will redirected to login page. here user will login and will get the token</h2>
 
 ![Screenshot (2374)](https://user-images.githubusercontent.com/101388992/230823065-a5f92945-4bdb-438b-829e-669b6c5ef2a2.png)
 
