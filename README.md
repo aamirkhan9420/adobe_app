@@ -6,7 +6,7 @@ Adobe Media is a social media platform where users must log in first. Then the u
 <li>Login and Signup</li> 
 <li>User can create post</li> 
 <li>User can see posts </li> 
-<h1>User can edit post</h1>
+<li>User can edit post</li>
 <li>User can delete the post </li>
 <li>User can like and unlike the post</li> 
 <li>user can see post analytics </li> 
