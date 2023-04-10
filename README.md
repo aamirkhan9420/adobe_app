@@ -34,10 +34,22 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2376)](https://user-images.githubusercontent.com/101388992/230823099-75b17e8d-7ae6-4d4e-a704-c1fb033fcf15.png)
 
-<h2>If user wants to post something then user have to click on the Create Post in navbar then user will redirected to the create post page where user can make the post</h2>
+<h2>If user wants to post something then user have to click on the Create Post in navbar then user will redirected to the create post page where user can make the post.</h2>
 
 
 ![Screenshot (2377)](https://user-images.githubusercontent.com/101388992/230823138-a2ff8ede-6eb3-46e7-9699-8ba60aea7b1c.png)
+
+<h2>In case user wants to edit the post the user needs to click on the edit icon.then user will redirected to the post edit page where user can edit the post.</h2>
+
+![Screenshot (2384)](https://user-images.githubusercontent.com/101388992/230823973-8f9e63ca-d526-42ec-add9-6a44b670e170.png)
+
+
+<h2>If user clicks on view icon the user will redirected to the view page where user will see details of post</h2>
+
+
+
+![Screenshot (2385)](https://user-images.githubusercontent.com/101388992/230823981-5bed7c7f-bf7a-4906-a134-f10a78c4b83d.png)
+
 
 
 ![Screenshot (2378)](https://user-images.githubusercontent.com/101388992/230823831-5fa409f6-03aa-46de-8a01-3c4a793fe3cf.png)
@@ -67,14 +79,6 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 
 
-![Screenshot (2384)](https://user-images.githubusercontent.com/101388992/230823973-8f9e63ca-d526-42ec-add9-6a44b670e170.png)
-
-
-
-
-
-
-![Screenshot (2385)](https://user-images.githubusercontent.com/101388992/230823981-5bed7c7f-bf7a-4906-a134-f10a78c4b83d.png)
 
 
 
