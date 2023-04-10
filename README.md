@@ -29,10 +29,13 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2375)](https://user-images.githubusercontent.com/101388992/230823083-d7fad758-7ed4-4426-aee9-52f22f92a1cd.png)
 
-<h2>if user clicks on PostAnalytics will redirected to postanalytics page where user can see total number of post and top 5 most liked posts</h2>
+<h2>if user clicks on PostAnalytics in navbar then user will redirected to postanalytics page where user can see total number of post and top 5 most liked posts</h2>
 
 
 ![Screenshot (2376)](https://user-images.githubusercontent.com/101388992/230823099-75b17e8d-7ae6-4d4e-a704-c1fb033fcf15.png)
+
+<h2>If user wants to post something then user have to click on the Create Post in navbar then user will redirected to the create post page where user can make the post</h2>
+
 
 ![Screenshot (2377)](https://user-images.githubusercontent.com/101388992/230823138-a2ff8ede-6eb3-46e7-9699-8ba60aea7b1c.png)
 
