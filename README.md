@@ -25,9 +25,11 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2374)](https://user-images.githubusercontent.com/101388992/230823065-a5f92945-4bdb-438b-829e-669b6c5ef2a2.png)
 
-<h2>After getting token user will redirected to post list page where user can see different posts. and user can edit, like, unlike, delelte the posts</h2>
+<h2>After getting token user will redirected to post list page where user can see different posts. and user can edit,view, like, unlike, delelte the posts</h2>
 
 ![Screenshot (2375)](https://user-images.githubusercontent.com/101388992/230823083-d7fad758-7ed4-4426-aee9-52f22f92a1cd.png)
+
+<h2>if user clicks on PostAnalytics will redirected to postanalytics page where user can see total number of post and top 5 most liked posts</h2>
 
 
 ![Screenshot (2376)](https://user-images.githubusercontent.com/101388992/230823099-75b17e8d-7ae6-4d4e-a704-c1fb033fcf15.png)
