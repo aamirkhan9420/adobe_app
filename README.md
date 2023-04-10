@@ -55,7 +55,7 @@ Adobe Media is a social media platform where users must log in first. Then the u
 ![Screenshot (2378)](https://user-images.githubusercontent.com/101388992/230823831-5fa409f6-03aa-46de-8a01-3c4a793fe3cf.png)
 
 
-
+<h2>if user clicks on UserAnalytics in navbar then user will redirected to UserAnalytics page where user can see total number of users and top 5 most acitve users</h2>
 
 
 ![Screenshot (2379)](https://user-images.githubusercontent.com/101388992/230823853-afbf0ff1-c648-411f-a541-e61ca76d7db1.png)
