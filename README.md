@@ -39,7 +39,7 @@ Adobe Media is a social media platform where users must log in first. Then the u
 
 ![Screenshot (2377)](https://user-images.githubusercontent.com/101388992/230823138-a2ff8ede-6eb3-46e7-9699-8ba60aea7b1c.png)
 
-<h2>In case user wants to edit the post the user needs to click on the edit icon.then user will redirected to the post edit page where user can edit the post.</h2>
+<h2>In case user wants to edit the post then user needs to click on the edit icon.then user will redirected to the post edit page where user can edit the post.</h2>
 
 ![Screenshot (2384)](https://user-images.githubusercontent.com/101388992/230823973-8f9e63ca-d526-42ec-add9-6a44b670e170.png)
 
