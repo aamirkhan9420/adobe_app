@@ -37,7 +37,6 @@ postRoute.delete("/:id", async (req, res) => {
 
 postRoute.post("/:id/like", async (req, res) => {
     let id = req.params.id
-    // let { likes } = await PostModel.findOne({ _id: id })
     let likes=req.body.likes
     let newlike = likes + 1
     await PostModel.findByIdAndUpdate({ _id: id }, { likes: newlike })
@@ -47,7 +46,6 @@ postRoute.post("/:id/like", async (req, res) => {
 postRoute.post("/:id/unlike", async (req, res) => {
     let id = req.params.id
     let likes=req.body.likes
-    // let { likes } = await PostModel.findOne({ _id: id })
     let newunlike;
     if (likes >= 1) {
         newunlike = likes - 1

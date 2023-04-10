@@ -1,6 +1,6 @@
-import { Box, Grid,  Text, useToast } from '@chakra-ui/react'
+import { Box, Grid, Text, useToast } from '@chakra-ui/react'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { GrView } from "react-icons/gr";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
@@ -9,10 +9,10 @@ import { BiDislike } from "react-icons/bi";
 
 import axios from 'axios';
 
-function PostGridBox({ props, getPostList }) {
+function PostGridBox({ props, getPostList, getPostAnalytics, getMostFiveUserList }) {
     let navigate = useNavigate()
     let toast = useToast()
-
+    let location = useLocation()
     let token = localStorage.getItem("token")
     const config = {
         headers: { Authorization: `Bearer ${token}` }
@@ -24,6 +24,10 @@ function PostGridBox({ props, getPostList }) {
 
     let handleDelete = (id) => {
         axios.delete(`http://localhost:8080/posts/${id}`, config).then((res) => {
+            if (location.pathname == "/postanalytics") {
+                getPostAnalytics()
+                getMostFiveUserList()
+            }
             toast({
                 title: res.data.msg,
                 status: "success",
@@ -43,15 +47,22 @@ function PostGridBox({ props, getPostList }) {
 
     let handleLike = (like, id) => {
         axios.post(`http://localhost:8080/posts/${id}/like`, { likes: like }, config).then((res) => {
-           
+            if (location.pathname == "/postanalytics") {
+                getPostAnalytics()
+                getMostFiveUserList()
+            }
             getPostList()
 
         }).catch((er) => {
             console.log(er)
         })
     }
-      let unlikefun=(like,id)=>{
+    let unlikefun = (like, id) => {
         axios.post(`http://localhost:8080/posts/${id}/unlike`, { likes: like }, config).then((res) => {
+            if (location.pathname == "/postanalytics") {
+                getPostAnalytics()
+                getMostFiveUserList()
+            }
             getPostList()
 
         }).catch((er) => {
@@ -60,7 +71,7 @@ function PostGridBox({ props, getPostList }) {
     }
 
 
-    
+
     return (
         <Box w={{ base: "100%", sm: "100%", md: "90%", lg: "80%", xl: "80%" }} margin={"auto"} mt={20}>
 
@@ -76,7 +87,7 @@ function PostGridBox({ props, getPostList }) {
                             <MdDeleteForever cursor={"pointer"} onClick={() => handleDelete(el._id)} />
                             <AiOutlineLike cursor={"pointer"} onClick={() => handleLike(el.likes, el._id)} />
                             <span>{el.likes}</span>
-                            <BiDislike cursor={"pointer"}  onClick={()=>unlikefun(el.likes, el._id)} />
+                            <BiDislike cursor={"pointer"} onClick={() => unlikefun(el.likes, el._id)} />
                         </Box>
                     </Box>
                 ))}

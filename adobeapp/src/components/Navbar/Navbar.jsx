@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <Flex zIndex={700} w={"100%"} boxShadow="sm" height={"80px"} alignItems={"center"} justifyContent="space-evenly" bgColor={"#CD5D67"} position="sticky" top={0}  >
       <Box textAlign={"center"} borderRadius={5} bgGradient='linear(to-r, green.200, pink.500)' color={'white'} p={2}>
-        <Link to={"/postlist"}>
+        <Link to={"/userform"}>
           Adobe Media
         </Link>
       </Box>

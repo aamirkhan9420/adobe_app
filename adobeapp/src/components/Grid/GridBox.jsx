@@ -1,22 +1,31 @@
-import { Avatar, Box, Grid, Heading, useToast } from '@chakra-ui/react'
+import { Avatar, Box, Grid, Heading, cookieStorageManager, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { GrView } from "react-icons/gr";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
 
-function GridBox({ props, getUserList }) {
+function GridBox({ props, getUserList, getUserAnalytics, getTopFiveUserList }) {
     let navigate = useNavigate()
     let toast = useToast()
+    let location = useLocation()
+
     let handleView = (el) => {
         navigate("/viewuser", { state: el })
     }
-
+    let token = localStorage.getItem("token")
+    const config = {
+        headers: { Authorization: `Bearer ${token}` }
+    };
     let handleDelete = (id) => {
-        axios.delete(`http://localhost:8080/users/${id}`).then((res) => {
+        if (location.pathname == "/useranalytics") {
+            getUserAnalytics()
+            getTopFiveUserList()
+        }
+        axios.delete(`http://localhost:8080/users/${id}`, config).then((res) => {
             toast({
                 title: res.data.msg,
                 status: "success",
@@ -25,12 +34,13 @@ function GridBox({ props, getUserList }) {
             })
             getUserList()
 
+
         }).catch((er) => {
             console.log(er)
         })
     }
     let handleEdit = (el) => {
-         navigate("/userform",{state:el})
+        navigate("/userform", { state: el })
     }
     return (
 
