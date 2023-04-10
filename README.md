@@ -61,8 +61,7 @@ Adobe Media is a social media platform where users must log in first. Then the u
 ![Screenshot (2379)](https://user-images.githubusercontent.com/101388992/230823853-afbf0ff1-c648-411f-a541-e61ca76d7db1.png)
 
 
-
-
+<h2>If user clicks on view icon then user will redirected to the view page where user will see details of user.</h2>
 
 
 
