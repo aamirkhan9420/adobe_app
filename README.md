@@ -68,17 +68,11 @@ Adobe Media is a social media platform where users must log in first. Then the u
 ![Screenshot (2382)](https://user-images.githubusercontent.com/101388992/230823945-6d4d8389-f6a0-4831-ae54-95d401cdc31d.png)
 
 
+<h2>In case user wants to edit the profile then user needs to click on the edit icon.then user will redirected to the profile edit page where user can edit the profile.</h2>
 
 
 
 ![Screenshot (2383)](https://user-images.githubusercontent.com/101388992/230823958-8211e7bb-e1ea-4f55-ab28-1c6a8819cd85.png)
-
-
-
-
-
-
-
 
 
 
