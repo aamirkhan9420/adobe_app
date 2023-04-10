@@ -12,7 +12,8 @@ code {
     monospace;
 }
 span{
-  color: #BABD8D;
+  color: #053C5E;
+  font-weight: 700;
 }
 .active{
   color: black;

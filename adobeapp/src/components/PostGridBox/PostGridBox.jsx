@@ -23,7 +23,7 @@ function PostGridBox({ props, getPostList, getPostAnalytics, getMostFiveUserList
     }
 
     let handleDelete = (id) => {
-        axios.delete(`http://localhost:8080/posts/${id}`, config).then((res) => {
+        axios.delete(`https://adobe-media.onrender.com/posts/${id}`, config).then((res) => {
             if (location.pathname == "/postanalytics") {
                 getPostAnalytics()
                 getMostFiveUserList()
@@ -46,7 +46,7 @@ function PostGridBox({ props, getPostList, getPostAnalytics, getMostFiveUserList
     }
 
     let handleLike = (like, id) => {
-        axios.post(`http://localhost:8080/posts/${id}/like`, { likes: like }, config).then((res) => {
+        axios.post(`https://adobe-media.onrender.com/posts/${id}/like`, { likes: like }, config).then((res) => {
             if (location.pathname == "/postanalytics") {
                 getPostAnalytics()
                 getMostFiveUserList()
@@ -58,7 +58,7 @@ function PostGridBox({ props, getPostList, getPostAnalytics, getMostFiveUserList
         })
     }
     let unlikefun = (like, id) => {
-        axios.post(`http://localhost:8080/posts/${id}/unlike`, { likes: like }, config).then((res) => {
+        axios.post(`https://adobe-media.onrender.com/posts/${id}/unlike`, { likes: like }, config).then((res) => {
             if (location.pathname == "/postanalytics") {
                 getPostAnalytics()
                 getMostFiveUserList()

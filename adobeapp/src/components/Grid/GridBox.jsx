@@ -25,7 +25,7 @@ function GridBox({ props, getUserList, getUserAnalytics, getTopFiveUserList }) {
             getUserAnalytics()
             getTopFiveUserList()
         }
-        axios.delete(`http://localhost:8080/users/${id}`, config).then((res) => {
+        axios.delete(`https://adobe-media.onrender.com/users/${id}`, config).then((res) => {
             toast({
                 title: res.data.msg,
                 status: "success",
